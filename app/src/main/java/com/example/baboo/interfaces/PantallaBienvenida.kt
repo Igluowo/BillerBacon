@@ -40,8 +40,9 @@ fun PantallaBienvenida(navController: NavController) {
         //Mensaje de bienvenida
         Box(Modifier.padding(bottom = 50.dp)) {
             Column(Modifier.fillMaxWidth()) {
-                Text(text = "Bienvenido a Baboo", fontSize = 35.sp, textAlign = TextAlign.Center)
-                Text(text = "Baboo es una aplicacion de... zighrufllllllllllLHJKSGDJKSfJKLHSdfgoSIydfgosdefghyaosdufghowsefgowfuygowfuygwofyugwofuygoswyfgoswuyfgo")
+                Text(text = "Bienvenido", fontSize = 35.sp, textAlign = TextAlign.Center)
+                Text(text = "BillerBacon es una aplicación que se encarga de alertar sobre la caducidad de tus\n" +
+                        "suscripciones a gimnasios, revistas, plataformas de streaming y entre otras activas.")
             }
         }
         //Boton iniciar sesion
