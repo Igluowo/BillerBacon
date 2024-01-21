@@ -27,7 +27,8 @@ fun PantallaBienvenida(navController: NavController) {
         Box(
             Modifier
                 .fillMaxWidth()
-                .height(250.dp)) {
+                .height(250.dp)
+        ) {
 
         }
         //Mensaje de bienvenida
@@ -43,7 +44,7 @@ fun PantallaBienvenida(navController: NavController) {
         }
         //Boton Registrarse
         CrearBoton(texto = "Registrarse") {
-            navController.navigate(Navegacion.PantallaIniciarSesion.ruta)
+            navController.navigate(Navegacion.PantallaRegistro.ruta)
         }
     }
 }
