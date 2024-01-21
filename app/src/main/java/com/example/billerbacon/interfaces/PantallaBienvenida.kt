@@ -24,16 +24,23 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.billerbacon.R
+
 import com.example.billerbacon.navegacion.Navegacion
 
 @Composable
 fun PantallaBienvenida(navController: NavController) {
-    Column(horizontalAlignment = Alignment.CenterHorizontally,
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
             .fillMaxWidth()
             .background(Color(0xFFffe8c0))
     ) {
-        Text(text = "Bienvenido a BillerBacon", fontSize = 30.sp, textAlign = TextAlign.Center, color = Color.Black)
+        Text(
+            text = "Bienvenido a BillerBacon",
+            fontSize = 30.sp,
+            textAlign = TextAlign.Center,
+            color = Color.Black
+        )
         //Box para colocar el logo
         Box(
             modifier = Modifier
@@ -41,17 +48,26 @@ fun PantallaBienvenida(navController: NavController) {
                 .height(250.dp),
             contentAlignment = Alignment.Center
         ) {
-            Image(painter = painterResource(id = R.drawable.billerbacon), contentDescription = "Icono de la aplicacion")
+            Image(
+                painter = painterResource(id = R.drawable.billerbacon),
+                contentDescription = "Icono de la aplicacion"
+            )
         }
         //Mensaje de bienvenida
-        Box(modifier = Modifier
-            .padding(bottom = 20.dp),
+        Box(
+            modifier = Modifier
+                .padding(bottom = 20.dp),
             contentAlignment = Alignment.Center
         ) {
             Column(Modifier.fillMaxWidth()) {
-                Text(text = "BillerBacon es una aplicación que se encarga de alertar sobre la caducidad de tus " +
-                        "suscripciones a gimnasios, revistas, plataformas de streaming y entre otras activas.\n",
-                color = Color.Black, fontSize = 15.sp)
+                Text(
+                    text = "BillerBacon es una aplicación que se encarga de alertar sobre la caducidad de tus " +
+                            "suscripciones a gimnasios, revistas, plataformas de streaming y entre otras activas.\n",
+                    color = Color.Black, fontSize = 15.sp,
+                    modifier = Modifier.fillMaxWidth(), // Asegurarse de que el texto tenga el ancho completo del botón
+                    textAlign = TextAlign.Center // Alineación del texto
+
+                    )
             }
         }
         //Boton iniciar sesion
@@ -69,9 +85,12 @@ fun PantallaBienvenida(navController: NavController) {
 @Composable
 fun CrearBoton(texto: String, accion: () -> Unit) {
     Box(Modifier.padding(vertical = 35.dp)) {
-        Button(onClick = accion, shape = RoundedCornerShape(10.dp),
+        Button(
+            onClick = accion, shape = RoundedCornerShape(10.dp),
             modifier = Modifier.size(250.dp, 50.dp),
-            colors = ButtonDefaults.buttonColors(Color.White)) {
+            colors = ButtonDefaults.buttonColors(Color.White)
+
+        ) {
             Text(text = texto, color = Color.Black)
         }
     }
